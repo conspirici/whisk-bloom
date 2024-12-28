@@ -1,0 +1,173 @@
+body {
+    background-color: #ffe8d6;
+    font-family: 'Courier New', Courier, monospace;
+    margin: 0;
+    padding: 20px;
+    display: flex;
+    justify-content: center; 
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+.app-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+.app-heading {
+    font-size: 32px;
+    color: #ff6347;
+    margin-bottom: 20px;
+}
+
+.input-container {
+    border-radius: 16px;
+    padding: 16px;
+    margin-bottom: 20px;
+    display:flex;
+    justify-content: space-between;
+    align-items: center;
+    background: #f9f2e7;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+    width: 100%;
+    max-width: 500px;
+}
+
+.input-container input {
+    max-width: 100%;
+    padding: 12px;
+    border: 2px solid #f9f2e7;
+    border-radius: 8px;
+    margin-bottom: 12px;
+    margin-right: 12px;
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 16px;
+    outline: none;
+    background-color: #f9f2e7;
+}
+
+.input-container button {
+    background-color: #ff6347;
+    color: white;
+    font-family: 'Courier New', Courier, monospace;
+    border: none;
+    padding: 12px 24px;
+    border-radius: 20px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background-color 0.2s;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+    width: 100%;
+    max-width: 200px;
+}
+
+.input-container button:hover {
+    background-color: #ff8c42;
+}
+
+.chips-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 8px;
+    margin-bottom: 20px;
+}
+
+.chip {
+    display: inline-flex;
+    align-items: center;
+    background: #8e44ad;
+    color: white;
+    padding: 8px 16px;
+    border-radius: 20px;
+    font-size: 14px;
+    cursor: pointer;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    transition: all 0.2s;
+}
+
+.chip:hover {
+    background-color: #9b59b6;
+    transform: translateY(-2px);
+}
+
+.delete-icon {
+    width: 18px;
+    margin-left: 8px;
+    cursor: pointer;
+}
+
+
+.heart-icon{
+    width: 15px;
+    margin-right: 8px;
+    cursor: pointer;
+    position: absolute;
+    top: 20px; 
+    right: 30px; 
+    transition: transform 0.2s, color 0.3s;
+}
+.heart-icon.liked {
+    color: #8e44ad; 
+    transform: scale(2.2); 
+}
+
+
+.find-recipe-btn {
+    background-color: #ff8c42;
+    color: black;
+    font-family: 'Courier New', Courier, monospace;
+    border: none;
+    padding: 12px 24px;
+    border-radius: 20px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background-color 0.2s;
+    margin: 10px 0;
+    width: 100%;
+    max-width: 200px;
+}
+
+.find-recipe-btn:hover {
+    background-color: #ff6347;
+}
+
+.recipe-container {
+    background: #fff9e1;
+    border-radius: 16px;
+    padding: 20px;
+    margin-top: 20px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+    width: 100%;
+    max-width: 500px;
+    overflow-y: auto;
+    position: relative;
+}
+
+.recipe-container h1, .recipe-container h2, .recipe-container h3 {
+    color: #ff6347;
+    margin-top: 0;
+    font-family: 'Courier New', Courier, monospace;
+}
+
+.recipe-container ul, .recipe-container ol {
+    padding-left: 20px;
+    list-style-type: disc;
+}
+
+.recipe-container li {
+    margin-bottom: 8px;
+    font-family: 'Courier New', Courier, monospace;
+}
+
+p {
+    color: #333;
+    text-align: center;
+    font-size: 16px;
+    margin: 20px 0;
+    font-family: 'Courier New', Courier, monospace;
+}
