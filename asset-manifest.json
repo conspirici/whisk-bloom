@@ -1,15 +1,15 @@
 {
   "files": {
-    "main.css": "/whisk&bloom/static/css/main.117d162f.css",
-    "main.js": "/whisk&bloom/static/js/main.8f6f3a02.js",
-    "static/js/156.b7c903c6.chunk.js": "/whisk&bloom/static/js/156.b7c903c6.chunk.js",
-    "index.html": "/whisk&bloom/index.html",
-    "main.117d162f.css.map": "/whisk&bloom/static/css/main.117d162f.css.map",
-    "main.8f6f3a02.js.map": "/whisk&bloom/static/js/main.8f6f3a02.js.map",
-    "156.b7c903c6.chunk.js.map": "/whisk&bloom/static/js/156.b7c903c6.chunk.js.map"
+    "main.css": "/whisk-bloom/static/css/main.117d162f.css",
+    "main.js": "/whisk-bloom/static/js/main.98406d5e.js",
+    "static/js/156.b7c903c6.chunk.js": "/whisk-bloom/static/js/156.b7c903c6.chunk.js",
+    "index.html": "/whisk-bloom/index.html",
+    "main.117d162f.css.map": "/whisk-bloom/static/css/main.117d162f.css.map",
+    "main.98406d5e.js.map": "/whisk-bloom/static/js/main.98406d5e.js.map",
+    "156.b7c903c6.chunk.js.map": "/whisk-bloom/static/js/156.b7c903c6.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.117d162f.css",
-    "static/js/main.8f6f3a02.js"
+    "static/js/main.98406d5e.js"
   ]
 }
