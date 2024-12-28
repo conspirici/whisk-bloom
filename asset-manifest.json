@@ -1,0 +1,15 @@
+{
+  "files": {
+    "main.css": "/whisknbloom/static/css/main.117d162f.css",
+    "main.js": "/whisknbloom/static/js/main.9fab7793.js",
+    "static/js/156.b7c903c6.chunk.js": "/whisknbloom/static/js/156.b7c903c6.chunk.js",
+    "index.html": "/whisknbloom/index.html",
+    "main.117d162f.css.map": "/whisknbloom/static/css/main.117d162f.css.map",
+    "main.9fab7793.js.map": "/whisknbloom/static/js/main.9fab7793.js.map",
+    "156.b7c903c6.chunk.js.map": "/whisknbloom/static/js/156.b7c903c6.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.117d162f.css",
+    "static/js/main.9fab7793.js"
+  ]
+}
