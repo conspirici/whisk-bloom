@@ -1,0 +1,378 @@
+[33mcommit 4ed85e1c6628f425e78bb216186b6cbdc9b34ad4[m
+Author: Mansoor <sydmnsur@gmail.com>
+Date:   Sun Dec 29 23:04:36 2024 +0500
+
+    adding new features
+
+[1mdiff --git a/package-lock.json b/package-lock.json[m
+[1mindex 4829dab..a47db56 100644[m
+[1m--- a/package-lock.json[m
+[1m+++ b/package-lock.json[m
+[36m@@ -11,10 +11,13 @@[m
+         "axios": "^1.7.9",[m
+         "cra-template": "1.2.0",[m
+         "groq-sdk": "^0.9.1",[m
+[32m+[m[32m        "html2canvas": "^1.4.1",[m
+         "lucide-react": "^0.469.0",[m
+         "react": "^19.0.0",[m
+         "react-dom": "^19.0.0",[m
+         "react-markdown": "^9.0.1",[m
+[32m+[m[32m        "react-router": "^7.1.1",[m
+[32m+[m[32m        "react-router-dom": "^7.1.1",[m
+         "react-scripts": "5.0.1"[m
+       },[m
+       "devDependencies": {[m
+[36m@@ -3532,6 +3535,12 @@[m
+         "@types/node": "*"[m
+       }[m
+     },[m
+[32m+[m[32m    "node_modules/@types/cookie": {[m
+[32m+[m[32m      "version": "0.6.0",[m
+[32m+[m[32m      "resolved": "https://registry.npmjs.org/@types/cookie/-/cookie-0.6.0.tgz",[m
+[32m+[m[32m      "integrity": "sha512-4Kh9a6B2bQciAhf7FSuMRRkUWecJgJu9nPnx3yzpsfXX/c50REIqpHY4C82bXP90qrLtXtkDxTZosYO3UpOwlA==",[m
+[32m+[m[32m      "license": "MIT"[m
+[32m+[m[32m    },[m
+     "node_modules/@types/debug": {[m
+       "version": "4.1.12",[m
+       "resolved": "https://registry.npmjs.org/@types/debug/-/debug-4.1.12.tgz",[m
+[36m@@ -5157,6 +5166,15 @@[m
+       "integrity": "sha512-3oSeUO0TMV67hN1AmbXsK4yaqU7tjiHlbxRDZOpH0KW9+CeX4bRAaX0Anxt0tx2MrpRpWwQaPwIlISEJhYU5Pw==",[m
+       "license": "MIT"[m
+     },[m
+[32m+[m[32m    "node_modules/base64-arraybuffer": {[m
+[32m+[m[32m      "version": "1.0.2",[m
+[32m+[m[32m      "resolved": "https://registry.npmjs.org/base64-arraybuffer/-/base64-arraybuffer-1.0.2.tgz",[m
+[32m+[m[32m      "integrity": "sha512-I3yl4r9QB5ZRY3XuJVEPfc2XhZO6YweFPI+UovAzn+8/hb3oJ6lnysaFcjVpkCPfVWFUDvoZ8kmVDP7WyRtYtQ==",[m
+[32m+[m[32m      "license": "MIT",[m
+[32m+[m[32m      "engines": {[m
+[32m+[m[32m        "node": ">= 0.6.0"[m
+[32m+[m[32m      }[m
+[32m+[m[32m    },[m
+     "node_modules/batch": {[m
+       "version": "0.6.1",[m
+       "resolved": "https://registry.npmjs.org/batch/-/batch-0.6.1.tgz",[m
+[36m@@ -6098,6 +6116,15 @@[m
+         "postcss": "^8.4"[m
+       }[m
+     },[m
+[32m+[m[32m    "node_modules/css-line-break": {[m
+[32m+[m[32m      "version": "2.1.0",[m
+[32m+[m[32m      "resolved": "https://registry.npmjs.org/css-line-break/-/css-line-break-2.1.0.tgz",[m
+[32m+[m[32m      "integrity": "sha512-FHcKFCZcAha3LwfVBhCQbW2nCNbkZXn7KVUJcsT5/P8YmfsVja0FMPJr0B903j/E69HUphKiV9iQArX8SDYA4w==",[m
+[32m+[m[32m      "license": "MIT",[m
+[32m+[m[32m      "dependencies": {[m
+[32m+[m[32m        "utrie": "^1.0.2"[m
+[32m+[m[32m      }[m
+[32m+[m[32m    },[m
+     "node_modules/css-loader": {[m
+       "version": "6.11.0",[m
+       "resolved": "https://registry.npmjs.org/css-loader/-/css-loader-6.11.0.tgz",[m
+[36m@@ -9238,6 +9265,19 @@[m
+         }[m
+       }[m
+     },[m
+[32m+[m[32m    "node_modules/html2canvas": {[m
+[32m+[m[32m      "version": "1.4.1",[m
+[32m+[m[32m      "resolved": "https://registry.npmjs.org/html2canvas/-/html2canvas-1.4.1.tgz",[m
+[32m+[m[32m      "integrity": "sha512-fPU6BHNpsyIhr8yyMpTLLxAbkaK8ArIBcmZIRiBLiDhjeqvXolaEmDGmELFuX9I4xDcaKKcJl+TKZLqruBbmWA==",[m
+[32m+[m[32m      "license": "MIT",[m
+[32m+[m[32m      "dependencies": {[m
+[32m+[m[32m        "css-line-break": "^2.1.0",[m
+[32m+[m[32m        "text-segmentation": "^1.0.3"[m
+[32m+[m[32m      },[m
+[32m+[m[32m      "engines": {[m
+[32m+[m[32m        "node": ">=8.0.0"[m
+[32m+[m[32m      }[m
+[32m+[m[32m    },[m
+     "node_modules/htmlparser2": {[m
+       "version": "6.1.0",[m
+       "resolved": "https://registry.npmjs.org/htmlparser2/-/htmlparser2-6.1.0.tgz",[m
+[36m@@ -14925,6 +14965,55 @@[m
+         "node": ">=0.10.0"[m
+       }[m
+     },[m
+[32m+[m[32m    "node_modules/react-router": {[m
+[32m+[m[32m      "version": "7.1.1",[m
+[32m+[m[32m      "resolved": "https://registry.npmjs.org/react-router/-/react-router-7.1.1.tgz",[m
+[32m+[m[32m      "integrity": "sha512-39sXJkftkKWRZ2oJtHhCxmoCrBCULr/HAH4IT5DHlgu/Q0FCPV0S4Lx+abjDTx/74xoZzNYDYbOZWlJjruyuDQ==",[m
+[32m+[m[32m      "license": "MIT",[m
+[32m+[m[32m      "dependencies": {[m
+[32m+[m[32m        "@types/cookie": "^0.6.0",[m
+[32m+[m[32m        "cookie": "^1.0.1",[m
+[32m+[m[32m        "set-cookie-parser": "^2.6.0",[m
+[32m+[m[32m        "turbo-stream": "2.4.0"[m
+[32m+[m[32m      },[m
+[32m+[m[32m      "engines": {[m
+[32m+[m[32m        "node": ">=20.0.0"[m
+[32m+[m[32m      },[m
+[32m+[m[32m      "peerDependencies": {[m
+[32m+[m[32m        "react": ">=18",[m
+[32m+[m[32m        "react-dom": ">=18"[m
+[32m+[m[32m      },[m
+[32m+[m[32m      "peerDependenciesMeta": {[m
+[32m+[m[32m        "react-dom": {[m
+[32m+[m[32m          "optional": true[m
+[32m+[m[32m        }[m
+[32m+[m[32m      }[m
+[32m+[m[32m    },[m
+[32m+[m[32m    "node_modules/react-router-dom": {[m
+[32m+[m[32m      "version": "7.1.1",[m
+[32m+[m[32m      "resolved": "https://registry.npmjs.org/react-router-dom/-/react-router-dom-7.1.1.tgz",[m
+[32m+[m[32m      "integrity": "sha512-vSrQHWlJ5DCfyrhgo0k6zViOe9ToK8uT5XGSmnuC2R3/g261IdIMpZVqfjD6vWSXdnf5Czs4VA/V60oVR6/jnA==",[m
+[32m+[m[32m      "license": "MIT",[m
+[32m+[m[32m      "dependencies": {[m
+[32m+[m[32m        "react-router": "7.1.1"[m
+[32m+[m[32m      },[m
+[32m+[m[32m      "engines": {[m
+[32m+[m[32m        "node": ">=20.0.0"[m
+[32m+[m[32m      },[m
+[32m+[m[32m      "peerDependencies": {[m
+[32m+[m[32m        "react": ">=18",[m
+[32m+[m[32m        "react-dom": ">=18"[m
+[32m+[m[32m      }[m
+[32m+[m[32m    },[m
+[32m+[m[32m    "node_modules/react-router/node_modules/cookie": {[m
+[32m+[m[32m      "version": "1.0.2",[m
+[32m+[m[32m      "resolved": "https://registry.npmjs.org/cookie/-/cookie-1.0.2.tgz",[m
+[32m+[m[32m      "integrity": "sha512-9Kr/j4O16ISv8zBBhJoi4bXOYNTkFLOqSL3UDB0njXxCXNezjeyVrJyGOWtgfs/q2km1gwBcfH8q1yEGoMYunA==",[m
+[32m+[m[32m      "license": "MIT",[m
+[32m+[m[32m      "engines": {[m
+[32m+[m[32m        "node": ">=18"[m
+[32m+[m[32m      }[m
+[32m+[m[32m    },[m
+     "node_modules/react-scripts": {[m
+       "version": "5.0.1",[m
+       "resolved": "https://registry.npmjs.org/react-scripts/-/react-scripts-5.0.1.tgz",[m
+[36m@@ -15842,6 +15931,12 @@[m
+         "node": ">= 0.8.0"[m
+       }[m
+     },[m
+[32m+[m[32m    "node_modules/set-cookie-parser": {[m
+[32m+[m[32m      "version": "2.7.1",[m
+[32m+[m[32m      "resolved": "https://registry.npmjs.org/set-cookie-parser/-/set-cookie-parser-2.7.1.tgz",[m
+[32m+[m[32m      "integrity": "sha512-IOc8uWeOZgnb3ptbCURJWNjWUPcO3ZnTTdzsurqERrP6nPyv+paC55vJM0LpOlT2ne+Ix+9+CRG1MNLlyZ4GjQ==",[m
+[32m+[m[32m      "license": "MIT"[m
+[32m+[m[32m    },[m
+     "node_modules/set-function-length": {[m
+       "version": "1.2.2",[m
+       "resolved": "https://registry.npmjs.org/set-function-length/-/set-function-length-1.2.2.tgz",[m
+[36m@@ -17076,6 +17171,15 @@[m
+         "node": ">=8"[m
+       }[m
+     },[m
+[32m+[m[32m    "node_modules/text-segmentation": {[m
+[32m+[m[32m      "version": "1.0.3",[m
+[32m+[m[32m      "resolved": "https://registry.npmjs.org/text-segmentation/-/text-segmentation-1.0.3.tgz",[m
+[32m+[m[32m      "integrity": "sha512-iOiPUo/BGnZ6+54OsWxZidGCsdU8YbE4PSpdPinp7DeMtUJNJBoJ/ouUSTJjHkh1KntHaltHl/gDs2FC4i5+Nw==",[m
+[32m+[m[32m      "license": "MIT",[m
+[32m+[m[32m      "dependencies": {[m
+[32m+[m[32m        "utrie": "^1.0.2"[m
+[32m+[m[32m      }[m
+[32m+[m[32m    },[m
+     "node_modules/text-table": {[m
+       "version": "0.2.0",[m
+       "resolved": "https://registry.npmjs.org/text-table/-/text-table-0.2.0.tgz",[m
+[36m@@ -17293,6 +17397,12 @@[m
+       "integrity": "sha512-Xni35NKzjgMrwevysHTCArtLDpPvye8zV/0E4EyYn43P7/7qvQwPh9BGkHewbMulVntbigmcT7rdX3BNo9wRJg==",[m
+       "license": "0BSD"[m
+     },[m
+[32m+[m[32m    "node_modules/turbo-stream": {[m
+[32m+[m[32m      "version": "2.4.0",[m
+[32m+[m[32m      "resolved": "https://registry.npmjs.org/turbo-stream/-/turbo-stream-2.4.0.tgz",[m
+[32m+[m[32m      "integrity": "sha512-FHncC10WpBd2eOmGwpmQsWLDoK4cqsA/UT/GqNoaKOQnT8uzhtCbg3EoUDMvqpOSAI0S26mr0rkjzbOO6S3v1g==",[m
+[32m+[m[32m      "license": "ISC"[m
+[32m+[m[32m    },[m
+     "node_modules/type-check": {[m
+       "version": "0.4.0",[m
+       "resolved": "https://registry.npmjs.org/type-check/-/type-check-0.4.0.tgz",[m
+[36m@@ -17736,6 +17846,15 @@[m
+         "node": ">= 0.4.0"[m
+       }[m
+     },[m
+[32m+[m[32m    "node_modules/utrie": {[m
+[32m+[m[32m      "version": "1.0.2",[m
+[32m+[m[32m      "resolved": "https://registry.npmjs.org/utrie/-/utrie-1.0.2.tgz",[m
+[32m+[m[32m      "integrity": "sha512-1MLa5ouZiOmQzUbjbu9VmjLzn1QLXBhwpUa7kdLUQK+KQ5KA9I1vk5U4YHe/X2Ch7PYnJfWuWT+VbuxbGwljhw==",[m
+[32m+[m[32m      "license": "MIT",[m
+[32m+[m[32m      "dependencies": {[m
+[32m+[m[32m        "base64-arraybuffer": "^1.0.2"[m
+[32m+[m[32m      }[m
+[32m+[m[32m    },[m
+     "node_modules/uuid": {[m
+       "version": "8.3.2",[m
+       "resolved": "https://registry.npmjs.org/uuid/-/uuid-8.3.2.tgz",[m
+[1mdiff --git a/package.json b/package.json[m
+[1mindex e994f26..f958dd9 100644[m
+[1m--- a/package.json[m
+[1m+++ b/package.json[m
+[36m@@ -6,10 +6,13 @@[m
+     "axios": "^1.7.9",[m
+     "cra-template": "1.2.0",[m
+     "groq-sdk": "^0.9.1",[m
+[32m+[m[32m    "html2canvas": "^1.4.1",[m
+     "lucide-react": "^0.469.0",[m
+     "react": "^19.0.0",[m
+     "react-dom": "^19.0.0",[m
+     "react-markdown": "^9.0.1",[m
+[32m+[m[32m    "react-router": "^7.1.1",[m
+[32m+[m[32m    "react-router-dom": "^7.1.1",[m
+     "react-scripts": "5.0.1"[m
+   },[m
+   "scripts": {[m
+[36m@@ -19,7 +22,6 @@[m
+     "eject": "react-scripts eject",[m
+     "predeploy": "npm run build",[m
+     "deploy": "gh-pages -d build"[m
+[31m-[m
+   },[m
+   "eslintConfig": {[m
+     "extends": [[m
+[36m@@ -43,5 +45,4 @@[m
+     "gh-pages": "^6.2.0"[m
+   },[m
+   "homepage": "https://conspirici.github.io/whisk-bloom"[m
+[31m-[m
+ }[m
+[1mdiff --git a/src/App.js b/src/App.js[m
+[1mindex 5742ab3..27e2f6f 100644[m
+[1m--- a/src/App.js[m
+[1m+++ b/src/App.js[m
+[36m@@ -1,88 +1,41 @@[m
+[32m+[m[32mimport Home from './pages/Home';[m
+[32m+[m[32mimport Pantry from './pages/pantry';[m
+[32m+[m[32mimport Navbar from './components/navbar';[m
+ import { useState } from 'react';[m
+[31m-import axios from 'axios';[m
+[31m-import Input from './components/input';[m
+[31m-import Chip from './components/chip';[m
+[31m-import Recipe from './components/recipe';[m
+ import './styles.css'; [m
+[32m+[m[32mimport { BrowserRouter, Routes, Route } from 'react-router-dom';[m
+[32m+[m[32mimport NotFound from './pages/notfound';[m
+[32m+[m[32mimport About from './pages/about';[m
+ [m
+ function App() {[m
+[31m-  const [ingredients, setIngredients] = useState([]);[m
+[31m-  const [recipe, setRecipe] = useState('');[m
+[31m-  const [liked, setLiked] = useState(false);[m
+[31m-[m
+[31m-  const addIngredient = (newIngredient) => {[m
+[31m-    setIngredients([...ingredients, newIngredient]);[m
+[31m-  };[m
+[31m-[m
+[31m-  const deleteChip = (ingredientToDelete) => {[m
+[31m-    setIngredients(ingredients.filter((ingredient) => ingredient !== ingredientToDelete));[m
+[32m+[m[32m  const [likedRecipes, setLikedRecipes] = useState([]);[m
+[32m+[m
+[32m+[m[32m  const Liked = (recipe) => {[m
+[32m+[m[32m    setLikedRecipes((prevRecipes) => {[m
+[32m+[m[32m      if (prevRecipes.includes(recipe)) {[m
+[32m+[m[32m        return prevRecipes.filter((likedRecipe) => likedRecipe !== recipe);[m
+[32m+[m[32m      } else {[m
+[32m+[m[32m        return [...prevRecipes, recipe];[m
+[32m+[m[32m      }[m
+[32m+[m[32m    });[m
+   };[m
+ [m
+[31m-  const deleteRecipe = () => {[m
+[31m-    setRecipe('')[m
+[31m-[m
+[32m+[m[32m  const deleteLikedRecipe = (LikedRecipeToDelete) => {[m
+[32m+[m[32m    setLikedRecipes((prevRecipes) => prevRecipes.filter((likedRecipe) => likedRecipe !== LikedRecipeToDelete));[m
+   }[m
+[31m-[m
+[31m-  const Liked = () => {[m
+[31m-    setLiked(!liked);[m
+[31m-  };[m
+[31m-  const findRecipe = async () => {[m
+[31m-    if (ingredients.length === 0) {[m
+[31m-      return;[m
+[31m-    }[m
+[31m-    const prompt = `Find a recipe that uses the ingredients: ${ingredients.join()}`;[m
+[31m-[m
+[31m-    try {[m
+[31m-      const response = await axios.post([m
+[31m-        'https://api.groq.com/openai/v1/chat/completions',[m
+[31m-        {[m
+[31m-          model: 'llama3-8b-8192',[m
+[31m-          messages: [[m
+[31m-            {[m
+[31m-              role: 'system',[m
+[31m-              content: 'Write a complete recipe that matches most with the entered ingredients, step-by-step instructions, dont write anything else, just return the recipe',[m
+[31m-            },[m
+[31m-            {[m
+[31m-              role: 'user',[m
+[31m-              content: prompt,[m
+[31m-            },[m
+[31m-          ],[m
+[31m-        },[m
+[31m-        {[m
+[31m-          headers: {[m
+[31m-            'Content-Type': 'application/json',[m
+[31m-            'Authorization': `Bearer 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`, // Replace with your actual API key[m
+[31m-          },[m
+[31m-        }[m
+[31m-      );[m
+[31m-      console.log(response);[m
+[31m-      setRecipe(response.data.choices[0].message.content);[m
+[31m-    } catch (error) {[m
+[31m-      console.error('Error fetching recipe:', error);[m
+[31m-    }[m
+[31m-  };[m
+[31m-[m
+[32m+[m[41m  [m
+   return ([m
+[31m-    <div className="app-container">[m
+[31m-      <h1 className="app-heading">Generate Recipe with AI</h1>[m
+[31m-      <Input onInput={addIngredient} />[m
+[31m-      [m
+[31m-      <div className="chips-container">[m
+[31m-        {ingredients.map((ingredient, index) => ([m
+[31m-          <Chip key={index} ingredient={ingredient} Delete={deleteChip} />[m
+[31m-        ))}[m
+[31m-      </div>[m
+[31m-[m
+[31m-      <button className="find-recipe-btn" onClick={findRecipe}>[m
+[31m-        Find Recipe[m
+[31m-      </button>[m
+[31m-[m
+[31m-      <div>[m
+[31m-        {recipe && <Recipe recipe={recipe} Delete={deleteRecipe} Liked = {Liked} />}[m
+[32m+[m[32m    <BrowserRouter>[m
+[32m+[m[32m      <div className="App">[m
+[32m+[m[32m        <Navbar />[m
+[32m+[m[32m        <Routes>[m
+[32m+[m[32m          <Route path="/" element={<Home Liked={Liked} likedRecipes={likedRecipes} />} />[m
+[32m+[m[32m          <Route path="/pantry" element={<Pantry likedRecipes={likedRecipes} deleteLikedRecipe={deleteLikedRecipe}/>} />[m
+[32m+[m[32m          <Route path="/about" element={<About />} />[m
+[32m+[m[32m          <Route path="*" element={<NotFound />} />[m
+[32m+[m[32m        </Routes>[m
+       </div>[m
+[31m-[m
+[31m-      {ingredients.length === 0 && <p>Enter ingredients</p>}[m
+[31m-    </div>[m
+[32m+[m[32m    </BrowserRouter>[m
+   );[m
+ }[m
+ [m
+[1mdiff --git a/src/components/navbar.js b/src/components/navbar.js[m
+[1mnew file mode 100644[m
+[1mindex 0000000..26d99ae[m
+[1m--- /dev/null[m
+[1m+++ b/src/components/navbar.js[m
+[36m@@ -0,0 +1,25 @@[m
+[32m+[m[32mimport React from "react";[m
+[32m+[m[32mimport { Link } from "react-router-dom";[m
+[32m+[m
+[32m+[m[32mfunction Navbar() {[m
+[32m+[m[32m    return ([m
+[32m+[m[32m        <nav className="navbar">[m
+[32m+[m[32m            <div className="navbar-logo">[m
+[32m+[m[32m                <Link to="/">Whisk & Bloom</Link>[m
+[32m+[m[32m            </div>[m
+[32m+[m[32m            <ul className="navbar-links">[m
+[32m+[m[32m                <li>[m
+[32m+[m[32m                    <Link to="/">AI</Link>[m
+[32m+[m[32m                </li>[m
+[32m+[m[32m                <li>[m
+[32m+[m[32m                    <Link to="/pantry">P

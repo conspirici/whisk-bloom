@@ -8,6 +8,8 @@ import '../styles.css';
 function Home({ Liked, likedRecipes}){
     const [ingredients, setIngredients] = useState([]);
     const [recipe, setRecipe] = useState('');
+    const [loading, setLoading] = useState(false);
+
     
   
     const addIngredient = (newIngredient) => {
@@ -23,25 +25,23 @@ function Home({ Liked, likedRecipes}){
   
     }
 
-    
-  
-   
-
-    const findRecipe = async () => {
+    const findRecipe = () => {
       if (ingredients.length === 0) {
         return;
       }
       const prompt = `Find a recipe that uses the ingredients: ${ingredients.join()}`;
-  
-      try {
-        const response = await axios.post(
+    
+      setLoading(true); 
+      axios
+        .post(
           'https://api.groq.com/openai/v1/chat/completions',
           {
             model: 'llama3-8b-8192',
             messages: [
               {
                 role: 'system',
-                content: 'Write a complete recipe that matches most with the entered ingredients, step-by-step instructions, dont write anything else, just return the recipe, firstline will always be recipe name',
+                content:
+                  'Write a complete recipe that matches most with the entered ingredients, step-by-step instructions, dont write anything else, just return the recipe, firstline will always be recipe name',
               },
               {
                 role: 'user',
@@ -52,16 +52,22 @@ function Home({ Liked, likedRecipes}){
           {
             headers: {
               'Content-Type': 'application/json',
-              'Authorization': `Bearer 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`, 
+              Authorization: `Bearer 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`,
             },
           }
-        );
-        console.log(response);
-        setRecipe(response.data.choices[0].message.content);
-      } catch (error) {
-        console.error('Error fetching recipe:', error);
-      }
+        )
+        .then((response) => {
+          console.log(response);
+          setRecipe(response.data.choices[0].message.content);
+        })
+        .catch((error) => {
+          console.error('Error fetching recipe:', error);
+        })
+        .finally(() => {
+          setLoading(false); 
+        });
     };
+    
 
     return(
         <div className="home"> 
@@ -79,7 +85,7 @@ function Home({ Liked, likedRecipes}){
       </button>
 
       <div>
-        {recipe && <Recipe recipe={recipe} Delete={deleteRecipe} Liked={Liked} likedRecipes={likedRecipes} />}
+        {loading?(<p>loading</p>):recipe && <Recipe recipe={recipe} Delete={deleteRecipe} Liked={Liked} likedRecipes={likedRecipes} />}
       </div>
 
       {ingredients.length === 0 && <p>Enter ingredients</p>}
