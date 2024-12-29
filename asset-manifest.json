@@ -1,15 +1,15 @@
 {
   "files": {
-    "main.css": "/whisk-bloom/static/css/main.117d162f.css",
-    "main.js": "/whisk-bloom/static/js/main.98406d5e.js",
+    "main.css": "/whisk-bloom/static/css/main.93912bc8.css",
+    "main.js": "/whisk-bloom/static/js/main.18d3d1a5.js",
     "static/js/156.b7c903c6.chunk.js": "/whisk-bloom/static/js/156.b7c903c6.chunk.js",
     "index.html": "/whisk-bloom/index.html",
-    "main.117d162f.css.map": "/whisk-bloom/static/css/main.117d162f.css.map",
-    "main.98406d5e.js.map": "/whisk-bloom/static/js/main.98406d5e.js.map",
+    "main.93912bc8.css.map": "/whisk-bloom/static/css/main.93912bc8.css.map",
+    "main.18d3d1a5.js.map": "/whisk-bloom/static/js/main.18d3d1a5.js.map",
     "156.b7c903c6.chunk.js.map": "/whisk-bloom/static/js/156.b7c903c6.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.117d162f.css",
-    "static/js/main.98406d5e.js"
+    "static/css/main.93912bc8.css",
+    "static/js/main.18d3d1a5.js"
   ]
 }
