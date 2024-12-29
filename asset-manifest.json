@@ -1,15 +1,15 @@
 {
   "files": {
     "main.css": "/whisk-bloom/static/css/main.93912bc8.css",
-    "main.js": "/whisk-bloom/static/js/main.0ec40882.js",
+    "main.js": "/whisk-bloom/static/js/main.24b5fd7a.js",
     "static/js/156.b7c903c6.chunk.js": "/whisk-bloom/static/js/156.b7c903c6.chunk.js",
     "index.html": "/whisk-bloom/index.html",
     "main.93912bc8.css.map": "/whisk-bloom/static/css/main.93912bc8.css.map",
-    "main.0ec40882.js.map": "/whisk-bloom/static/js/main.0ec40882.js.map",
+    "main.24b5fd7a.js.map": "/whisk-bloom/static/js/main.24b5fd7a.js.map",
     "156.b7c903c6.chunk.js.map": "/whisk-bloom/static/js/156.b7c903c6.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.93912bc8.css",
-    "static/js/main.0ec40882.js"
+    "static/js/main.24b5fd7a.js"
   ]
 }
